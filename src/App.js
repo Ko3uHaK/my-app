@@ -2,8 +2,17 @@ import React from 'react';
 
 function App() {
 	return (
-		<input />
+		<>
+			<input/>
+			<br/>
+			<input/>
+			<br/>
+			<input/>
+		</>
 	)
+	// (
+	// 	<input />
+	// )
 	// (
 	// 	<>
 	// <ul>
