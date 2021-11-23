@@ -1,15 +1,23 @@
 import React from 'react';
 
 function App() {
+	const str1 = 'text1';
+	const str2 = 'text1';
 	return (
-		<>
-			<input/>
-			<br/>
-			<input/>
-			<br/>
-			<input/>
-		</>
-	)
+		<div>
+		<p>{str1}</p>
+		<p>{str2}</p>
+	</div>
+	);
+	// (
+	// 	<>
+	// 		<input/>
+	// 		<br/>
+	// 		<input/>
+	// 		<br/>
+	// 		<input/>
+	// 	</>
+	// )
 	// (
 	// 	<input />
 	// )
