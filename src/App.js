@@ -1,11 +1,16 @@
 import React from 'react';
 
 function App() {
-	const items = <><li>text1</li><li>text2</li><li>text3</li></>;
+	const attr = 'block';
 	
-	return <ul>
-		{items}
-	</ul>
+	return <div className={attr}>
+		text
+	</div>;
+	// const items = <><li>text1</li><li>text2</li><li>text3</li></>;
+	
+	// return <ul>
+	// 	{items}
+	// </ul>
 	// const li1 = <li>text1</li>;
 	// const li2 = <li>text2</li>;
 	// const li3 = <li>text3</li>;
