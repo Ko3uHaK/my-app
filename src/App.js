@@ -1,13 +1,21 @@
 import React from 'react';
 
 function App() {
-	const obj = {name: 'john', surname: 'smit'};
-	return(
-		<p>
-	name:    <span>{obj.name}</span> <br/>
-	surname: <span>{obj.surname}</span>
-		</p>
-	)
+	const li1 = <li>text1</li>;
+	const li2 = <li>text2</li>;
+	const li3 = <li>text3</li>;
+	return (
+		<ul>
+			{li1}{li2}{li3}
+		</ul>
+	);
+	// const obj = {name: 'john', surname: 'smit'};
+	// return(
+	// 	<p>
+	// name:    <span>{obj.name}</span> <br/>
+	// surname: <span>{obj.surname}</span>
+	// 	</p>
+	// )
 	// const arr = [1, 2, 3, 4, 5];
 	// return(
 	// 	<ul>
