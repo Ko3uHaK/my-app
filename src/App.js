@@ -2,13 +2,22 @@ import React from 'react';
 
 function App() {
 	let text;
-	const isAdult = true;
-	if(isAdult){
-		text = <p>yes</p>;
-	}else{
-		text =<p>no</p>;
+	const isAdmin = true;
+	if(isAdmin){
+		text=<div>
+			<p>asdasf</p>
+			<p>sdasd</p>
+		</div>;
 	}
-	return text;
+return text;
+	// let text;
+	// const isAdult = true;
+	// if(isAdult){
+	// 	text = <p>yes</p>;
+	// }else{
+	// 	text =<p>no</p>;
+	// }
+	// return text;
 	// const str1 = 'label';
 	// const str2 = 'block';
 	// const str3 = 'elem';
