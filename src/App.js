@@ -1,11 +1,16 @@
 import React from 'react';
 
 function App() {
-	const age = 17;
+	const isAuth = true;
 	
 	return <div>
-		{age>18 ? <p>yes</p>:<p>no</p>}
+		{isAuth && <p>вы авторизованы</p>}
 	</div>;
+	// const age = 17;
+	
+	// return <div>
+	// 	{age>18 ? <p>yes</p>:<p>no</p>}
+	// </div>;
 // 	let text;
 // 	const isAdmin = true;
 // 	if(isAdmin){
