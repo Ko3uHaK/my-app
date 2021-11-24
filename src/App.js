@@ -1,15 +1,20 @@
 import React from 'react';
 
 function App() {
-	let text;
-	const isAdmin = true;
-	if(isAdmin){
-		text=<div>
-			<p>asdasf</p>
-			<p>sdasd</p>
-		</div>;
-	}
-return text;
+	const age = 17;
+	
+	return <div>
+		{age>18 ? <p>yes</p>:<p>no</p>}
+	</div>;
+// 	let text;
+// 	const isAdmin = true;
+// 	if(isAdmin){
+// 		text=<div>
+// 			<p>asdasf</p>
+// 			<p>sdasd</p>
+// 		</div>;
+// 	}
+// return text;
 	// let text;
 	// const isAdult = true;
 	// if(isAdult){
