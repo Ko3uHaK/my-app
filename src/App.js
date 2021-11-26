@@ -1,15 +1,22 @@
 import React from 'react';
 
 function App() {
-	function getDigitsSum(num){
-		let string = num.toString();
-		let arr = string.split("");
-		let sum = arr.reduce((previousValue, currentValue) => +previousValue + +currentValue);
-		return sum;
-	}
-	return <p>
-	{getDigitsSum(12345)}
-	</p>
+		function showMess() {
+			alert('hello');
+		}
+		
+		return <div>
+			<button onClick={showMess}>show</button>
+		</div>;
+	// function getDigitsSum(num){
+	// 	let string = num.toString();
+	// 	let arr = string.split("");
+	// 	let sum = arr.reduce((previousValue, currentValue) => +previousValue + +currentValue);
+	// 	return sum;
+	// }
+	// return <p>
+	// {getDigitsSum(12345)}
+	// </p>
 	// const isAuth = false;
 	
 	// return <div>
