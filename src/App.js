@@ -1,11 +1,21 @@
 import React from 'react';
 
 function App() {
-	const isAuth = false;
-	
+	function getDigitsSum(num){
+		let string = num.toString();
+		let arr = string.split("");
+		let sum = arr.reduce((previousValue, currentValue) => +previousValue + +currentValue);
+		return sum;
+	}
+	const s = getDigitsSum(123);
 	return <div>
-		{!isAuth && <p>пожалуйста, авторизуйтесь</p>}
-	</div>;
+	{s}
+	</div>
+	// const isAuth = false;
+	
+	// return <div>
+	// 	{!isAuth && <p>пожалуйста, авторизуйтесь</p>}
+	// </div>;
 	// const isAuth = true;
 	
 	// return <div>
