@@ -7,10 +7,9 @@ function App() {
 		let sum = arr.reduce((previousValue, currentValue) => +previousValue + +currentValue);
 		return sum;
 	}
-	const s = getDigitsSum(123);
-	return <div>
-	{s}
-	</div>
+	return <p>
+	{getDigitsSum(12345)}
+	</p>
 	// const isAuth = false;
 	
 	// return <div>
