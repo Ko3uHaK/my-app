@@ -1,13 +1,25 @@
 import React from 'react';
 
 function App() {
-	function func(arg,event, res) {
-		console.log(arg,event, res );
-	}
+	const arr = [
+		<li>1</li>,
+		<li>2</li>,
+		<li>3</li>,
+		<li>4</li>,
+		<li>5</li>,
+	];
+	return(
+		<ul>
+			{arr}
+		</ul>
+	);
+	// function func(arg,event, res) {
+	// 	console.log(arg,event, res );
+	// }
 	
-	return <div>
-		<button onClick={event => func('eee',event,12)}>act</button>
-	</div>;
+	// return <div>
+	// 	<button onClick={event => func('eee',event,12)}>act</button>
+	// </div>;
 	// function func(event) {
 	// 	console.log(event.target); // объект с событием
 	// }
