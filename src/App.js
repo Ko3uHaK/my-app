@@ -1,13 +1,20 @@
 import React from 'react';
 
 function App() {
-	function func(event) {
-		console.log(event.target); // объект с событием
+	function func(arg, event) {
+		console.log(arg, event);
 	}
 	
 	return <div>
-		<button onClick={func}>act</button>
+		<button onClick={event => func('eee', event)}>act</button>
 	</div>;
+	// function func(event) {
+	// 	console.log(event.target); // объект с событием
+	// }
+	
+	// return <div>
+	// 	<button onClick={func}>act</button>
+	// </div>;
 // 	function show(num){
 // 		alert(num);
 // 	}
