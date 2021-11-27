@@ -1,12 +1,12 @@
 import React from 'react';
 
 function App() {
-	function func(arg, res, event) {
-		console.log(arg, res, event);
+	function func(event,arg, res) {
+		console.log(event, arg,res );
 	}
 	
 	return <div>
-		<button onClick={event => func('eee',12, event)}>act</button>
+		<button onClick={event => func(event,'eee',12)}>act</button>
 	</div>;
 	// function func(event) {
 	// 	console.log(event.target); // объект с событием
