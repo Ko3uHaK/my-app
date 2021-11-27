@@ -2,7 +2,7 @@ import React from 'react';
 
 function App() {
 	function func(event) {
-		console.log(event); // объект с событием
+		console.log(event.target); // объект с событием
 	}
 	
 	return <div>
