@@ -1,17 +1,27 @@
 import React from 'react';
 
 function App() {
-	let arr =[];
+	const arr = ['a', 'b', 'c', 'd', 'e'];
 
-	for (let i=1; i<6;i++){
-		arr.push(<li>{i}</li>)
-	}
-
+	const res = arr.map(function(item) {
+		return <li>{item}</li>;
+	});
 	return(
 		<ul>
-			{arr}
+			{res}
 		</ul>
-	);
+	)
+	// let arr =[];
+
+	// for (let i=1; i<6;i++){
+	// 	arr.push(<li>{i}</li>)
+	// }
+
+	// return(
+	// 	<ul>
+	// 		{arr}
+	// 	</ul>
+	// );
 	// const arr = [
 	// 	<li>1</li>,
 	// 	<li>2</li>,
