@@ -1,14 +1,21 @@
 import React from 'react';
 
 function App() {
-	function show(num){
-		alert(num);
+	function func(event) {
+		console.log(event); // объект с событием
 	}
+	
 	return <div>
-	<button onClick = {()=>show(1)}>act1</button>
-	<button onClick = {()=>show(2)}>act2</button>
-	<button onClick = {()=>show(3)}>act3</button>
-</div>;
+		<button onClick={func}>act</button>
+	</div>;
+// 	function show(num){
+// 		alert(num);
+// 	}
+// 	return <div>
+// 	<button onClick = {()=>show(1)}>act1</button>
+// 	<button onClick = {()=>show(2)}>act2</button>
+// 	<button onClick = {()=>show(3)}>act3</button>
+// </div>;
 	// function show1() {
 	// 	alert(1);
 	// }
