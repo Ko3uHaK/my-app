@@ -1,20 +1,20 @@
 import React from 'react';
 
 function App() {
-	const prods = [
-		{name: 'product1', cost: 100},
-		{name: 'product2', cost: 200},
-		{name: 'product3', cost: 300},
+	const users = [
+		{name: 'user1', surn: 'surn1', age: 30},
+		{name: 'user2', surn: 'surn2', age: 31},
+		{name: 'user3', surn: 'surn3', age: 32},
 	];
-	const res = prods.map(function(item, index) {
-		return <p key={index}>
-			<span>{item.name}</span>:
-			<span>{item.cost}</span>
-		</p>;
+	const res = users.map(function(item, index) {
+		return <li key={index}>
+		<span>{item.name}</span>:
+		<span>{item.surn}</span>
+		</li>;
 	});
-	return <div>
+	return <ul>
 		{res}
-	</div>;
+	</ul>;
 	// const arr = ['a', 'b', 'c', 'd', 'e'];
 
 	// const res = arr.map(function(item,index) {
