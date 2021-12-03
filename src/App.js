@@ -1,16 +1,28 @@
 import React from 'react';
 
 function App() {
-	const arr = ['a', 'b', 'c', 'd', 'e'];
-
-	const res = arr.map(function(item,index) {
-		return <li key ={index}>{item}</li>;
+	const prods = [
+		{name: 'product1', cost: 100},
+		{name: 'product2', cost: 200},
+		{name: 'product3', cost: 300},
+	];
+	const res = prods.map(function(item) {
+		return <p>{item.name} {item.cost}</p>;
 	});
-	return(
-		<ul>
-			{res}
-		</ul>
-	)
+	
+	return <div>
+		{res}
+	</div>;
+	// const arr = ['a', 'b', 'c', 'd', 'e'];
+
+	// const res = arr.map(function(item,index) {
+	// 	return <li key ={index}>{item}</li>;
+	// });
+	// return(
+	// 	<ul>
+	// 		{res}
+	// 	</ul>
+	// )
 	// let arr =[];
 
 	// for (let i=1; i<6;i++){
