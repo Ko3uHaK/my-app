@@ -6,8 +6,8 @@ function App() {
 		{name: 'product2', cost: 200},
 		{name: 'product3', cost: 300},
 	];
-	const res = prods.map(function(item) {
-		return <p>
+	const res = prods.map(function(item, index) {
+		return <p key={index}>
 			<span>{item.name}</span>:
 			<span>{item.cost}</span>
 		</p>;
