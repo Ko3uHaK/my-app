@@ -7,9 +7,11 @@ function App() {
 		{name: 'product3', cost: 300},
 	];
 	const res = prods.map(function(item) {
-		return <p>{item.name} {item.cost}</p>;
+		return <p>
+			<span>{item.name}</span>:
+			<span>{item.cost}</span>
+		</p>;
 	});
-	
 	return <div>
 		{res}
 	</div>;
