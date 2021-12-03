@@ -2,19 +2,29 @@ import React from 'react';
 
 function App() {
 	const users = [
-		{id:1,name: 'user1', surn: 'surn1', age: 30},
-		{id:2,name: 'user2', surn: 'surn2', age: 31},
-		{id:3,name: 'user3', surn: 'surn3', age: 32},
+		{id: 1, name: 'user1', surn: 'surn1', age: 30},
+		{id: 2, name: 'user2', surn: 'surn2', age: 31},
+		{id: 3, name: 'user3', surn: 'surn3', age: 32},
 	];
 	const res = users.map(function(item) {
-		return <li key={item.id}>
-		<span>{item.name}</span>:
-		<span>{item.surn}</span>
-		</li>;
+		return <tr key={item.id}>
+		<td>{item.name}</td>
+		<td>{item.surn}</td>
+		<td>{item.age}</td>
+		</tr>;
 	});
-	return <ul>
-		{res}
-	</ul>;
+	return <table>
+			<thead>
+				<tr>
+					<td>Name</td>
+					<td>Surname</td>
+					<td>Age</td>
+				</tr>
+			</thead>
+			<tbody>
+				{res}	
+			</tbody>
+	</table>;
 	// const arr = ['a', 'b', 'c', 'd', 'e'];
 
 	// const res = arr.map(function(item,index) {
