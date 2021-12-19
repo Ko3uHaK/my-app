@@ -1,30 +1,49 @@
+import 'react-native-get-random-values'
+import { nanoid } from 'nanoid';
 import React from 'react';
 
 function App() {
-	const users = [
-		{id: 1, name: 'user1', surn: 'surn1', age: 30},
-		{id: 2, name: 'user2', surn: 'surn2', age: 31},
-		{id: 3, name: 'user3', surn: 'surn3', age: 32},
+	const prods = [
+		{id: id(), name: 'product1', cost: 100},
+		{id: id(), name: 'product2', cost: 200},
+		{id: id(), name: 'product3', cost: 300},
 	];
-	const res = users.map(function(item) {
-		return <tr key={item.id}>
-		<td>{item.name}</td>
-		<td>{item.surn}</td>
-		<td>{item.age}</td>
-		</tr>;
+	function id(){
+		 prods.id = nanoid();
+	}
+	const res = prods.map(function(prod){
+		return <ul key ={prods.id}>
+			<li>{prod.name}</li>
+			<li>{prod.cost}</li>
+		</ul>
 	});
-	return <table>
-			<thead>
-				<tr>
-					<td>Name</td>
-					<td>Surname</td>
-					<td>Age</td>
-				</tr>
-			</thead>
-			<tbody>
-				{res}	
-			</tbody>
-	</table>;
+	return <ul>
+		<li>{res}</li>
+	</ul> 
+	// const users = [
+	// 	{id: 1, name: 'user1', surn: 'surn1', age: 30},
+	// 	{id: 2, name: 'user2', surn: 'surn2', age: 31},
+	// 	{id: 3, name: 'user3', surn: 'surn3', age: 32},
+	// ];
+	// const res = users.map(function(item) {
+	// 	return <tr key={item.id}>
+	// 	<td>{item.name}</td>
+	// 	<td>{item.surn}</td>
+	// 	<td>{item.age}</td>
+	// 	</tr>;
+	// });
+	// return <table>
+	// 		<thead>
+	// 			<tr>
+	// 				<td>Name</td>
+	// 				<td>Surname</td>
+	// 				<td>Age</td>
+	// 			</tr>
+	// 		</thead>
+	// 		<tbody>
+	// 			{res}	
+	// 		</tbody>
+	// </table>;
 	// const arr = ['a', 'b', 'c', 'd', 'e'];
 
 	// const res = arr.map(function(item,index) {
