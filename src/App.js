@@ -4,7 +4,8 @@ import React, {useState} from 'react';
 
 function App() {
 	const [name, setName] = useState('ALex');
-	const [age, setAge] = useState('23')
+	const [age, setAge] = useState('23');
+	let [inBlock, setInBlock] = useState(false);
 	
 	function clickHandler1(){
 		setName('Daniil')
@@ -14,9 +15,10 @@ function App() {
 	}
 	
 	return <div>
-		<span>{name}-{age}</span>
-		<button onClick={clickHandler1}>Name</button>
-		<button onClick={clickHandler2}>Age</button>
+		<span>{name}-{age}</span><br/>
+		<button onClick={clickHandler1}>Name</button><br/>
+		<button onClick={clickHandler2}>Age</button><br/>
+		<span>{inBlock}</span>
 	</div>;
 	// const prods = [
 	// 	{id: id(), name: 'product1', cost: 100},
