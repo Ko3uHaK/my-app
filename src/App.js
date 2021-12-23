@@ -6,8 +6,17 @@ function App() {
 	const [name, setName] = useState('ALex');
 	const [age, setAge] = useState('23')
 	
+	function clickHandler1(){
+		setName('Daniil')
+	}
+	function clickHandler2(){
+		setAge('27')
+	}
+	
 	return <div>
 		<span>{name}-{age}</span>
+		<button onClick={clickHandler1}>Name</button>
+		<button onClick={clickHandler2}>Age</button>
 	</div>;
 	// const prods = [
 	// 	{id: id(), name: 'product1', cost: 100},
