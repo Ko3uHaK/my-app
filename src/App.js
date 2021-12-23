@@ -1,25 +1,30 @@
 import 'react-native-get-random-values'
 import { nanoid } from 'nanoid';
-import React from 'react';
+import React, {useState} from 'react';
 
 function App() {
-	const prods = [
-		{id: id(), name: 'product1', cost: 100},
-		{id: id(), name: 'product2', cost: 200},
-		{id: id(), name: 'product3', cost: 300},
-	];
-	function id(){
-		 prods.id = nanoid();
-	}
-	const res = prods.map(function(prod){
-		return <ul key ={prods.id}>
-			<li>{prod.name}</li>
-			<li>{prod.cost}</li>
-		</ul>
-	});
-	return <ul>
-		<li>{res}</li>
-	</ul> 
+	const [name, setName] = useState('prod');
+	
+	return <div>
+		<span>{name}</span>
+	</div>;
+	// const prods = [
+	// 	{id: id(), name: 'product1', cost: 100},
+	// 	{id: id(), name: 'product2', cost: 200},
+	// 	{id: id(), name: 'product3', cost: 300},
+	// ];
+	// function id(){
+	// 	 prods.id = nanoid();
+	// }
+	// const res = prods.map(function(prod){
+	// 	return <ul key ={prods.id}>
+	// 		<li>{prod.name}</li>
+	// 		<li>{prod.cost}</li>
+	// 	</ul>
+	// });
+	// return <ul>
+	// 	<li>{res}</li>
+	// </ul> 
 	// const users = [
 	// 	{id: 1, name: 'user1', surn: 'surn1', age: 30},
 	// 	{id: 2, name: 'user2', surn: 'surn2', age: 31},
