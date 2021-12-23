@@ -6,28 +6,26 @@ function App() {
 	const [name, setName] = useState('ALex');
 	const [age, setAge] = useState('23');
 	let [inBlock, setInBlock] = useState(false);
-	
+
 	function clickHandler1(){
 		setName('Daniil')
 	}
 	function clickHandler2(){
 		setAge('27')
 	}
-	function clickHandler3(){
-		setInBlock(true);
-	}
-	function clickHandler4(){
-		setInBlock(false);
-	}
-	
+
+
 	return <div>
 		<span>{name}-{age}</span><br/>
 		<button onClick={clickHandler1}>Name</button><br/>
 		<button onClick={clickHandler2}>Age</button><br/>
 		<span>{inBlock ? "заблокирован" : "разблокирован" }</span><br/>
-		<button onClick={clickHandler3}>Заблокировать</button><br/>
-		<button onClick={clickHandler4}>Разблокировать</button>
+		<span>{!inBlock ? <button onClick={()=> setInBlock(true)}>Заблокировать</button> : <button onClick={()=> setInBlock(false)}>Разблокировать</button>}</span>
 	</div>;
+	// <button onClick={()=> setInBlock(true)}>Заблокировать</button>
+	// 	<button onClick={()=> setInBlock(false)}>Разблокировать</button>
+	// <span>{setInBlock && <button onClick={clickHandler3}>Заблокировать</button>}</span>
+	// <span>{!setInBlock && <button onClick={clickHandler4}>Разблокировать</button>} </span>
 	// const prods = [
 	// 	{id: id(), name: 'product1', cost: 100},
 	// 	{id: id(), name: 'product2', cost: 200},
