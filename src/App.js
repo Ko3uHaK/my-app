@@ -18,7 +18,7 @@ function App() {
 		<span>{name}-{age}</span><br/>
 		<button onClick={clickHandler1}>Name</button><br/>
 		<button onClick={clickHandler2}>Age</button><br/>
-		<span>{inBlock}</span>
+		<span>{inBlock ? "заблокирован" : "разблокирован" }</span>
 	</div>;
 	// const prods = [
 	// 	{id: id(), name: 'product1', cost: 100},
