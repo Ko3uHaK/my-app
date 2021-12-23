@@ -13,12 +13,20 @@ function App() {
 	function clickHandler2(){
 		setAge('27')
 	}
+	function clickHandler3(){
+		setInBlock(true);
+	}
+	function clickHandler4(){
+		setInBlock(false);
+	}
 	
 	return <div>
 		<span>{name}-{age}</span><br/>
 		<button onClick={clickHandler1}>Name</button><br/>
 		<button onClick={clickHandler2}>Age</button><br/>
-		<span>{inBlock ? "заблокирован" : "разблокирован" }</span>
+		<span>{inBlock ? "заблокирован" : "разблокирован" }</span><br/>
+		<button onClick={clickHandler3}>Заблокировать</button><br/>
+		<button onClick={clickHandler4}>Разблокировать</button>
 	</div>;
 	// const prods = [
 	// 	{id: id(), name: 'product1', cost: 100},
