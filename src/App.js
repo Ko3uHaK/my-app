@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 
 function App() {
 	const [name, setName] = useState('ALex');
-	const [age, setAge] = useState('23');
+	const [age, setAge] = useState(23);
 	let [inBlock, setInBlock] = useState(false);
 
 	function clickHandler1(){
@@ -21,6 +21,8 @@ function App() {
 		<button onClick={clickHandler2}>Age</button><br/>
 		<span>{inBlock ? "заблокирован" : "разблокирован" }</span><br/>
 		<span>{!inBlock ? <button onClick={()=> setInBlock(true)}>Заблокировать</button> : <button onClick={()=> setInBlock(false)}>Разблокировать</button>}</span>
+		<button onClick={()=>setAge(age +1)}>+1</button>
+		<button onClick={()=>setAge(age -1)}>-1</button>
 	</div>;
 	// <button onClick={()=> setInBlock(true)}>Заблокировать</button>
 	// 	<button onClick={()=> setInBlock(false)}>Разблокировать</button>
