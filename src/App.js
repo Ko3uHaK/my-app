@@ -3,10 +3,11 @@ import { nanoid } from 'nanoid';
 import React, {useState} from 'react';
 
 function App() {
-	const [name, setName] = useState('prod');
+	const [name, setName] = useState('ALex');
+	const [age, setAge] = useState('23')
 	
 	return <div>
-		<span>{name}</span>
+		<span>{name}-{age}</span>
 	</div>;
 	// const prods = [
 	// 	{id: id(), name: 'product1', cost: 100},
