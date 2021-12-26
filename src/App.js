@@ -13,6 +13,7 @@ function App() {
 			<input value={value2} onChange={event => setValue2(event.target.value)} />
 			
 			<button onClick={() => setResult(Number(value1) + Number(value2))}>btn</button>
+			<button onClick={() => setResult(Number(value1) * Number(value2))}>btn</button>
 			<p>result: {result}</p>
 		</div>;
 	// const [value1, setValue1] = useState(0);
