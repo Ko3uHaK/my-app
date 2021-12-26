@@ -3,15 +3,15 @@ import { nanoid } from 'nanoid';
 import React, {useState} from 'react';
 
 function App() {
-	const [value, setValue] = useState('text');
-	
-	function handleChange(event) {
-		setValue(event.target.value); // текущий текст инпута
-	}
-	
-	return <div>
-		<input value={value} onChange={handleChange} />
-	</div>;
+		const [value1, setValue1] = useState('text');
+		const [value2, setValue2] = useState("age");
+		
+		return <div>
+			<input value={value1} onChange={event => setValue1(event.target.value)} /><br/>
+			<input value={value2} onChange={event => setValue2(event.target.value)}/>
+			<p>text: {value1}</p>
+			<p>age: {value2}</p>
+		</div>;
 	// const [name, setName] = useState('ALex');
 	// const [age, setAge] = useState(23);
 	// let [inBlock, setInBlock] = useState(false);
