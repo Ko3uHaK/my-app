@@ -6,7 +6,7 @@ function App() {
 		const [value, setValue] = useState('age');
 		
 		function showAge(){
-			return value;
+			return value - 257;
 		}
 		return <div>
 			<input value={value} onChange={event => setValue(event.target.value)} /><br/>
