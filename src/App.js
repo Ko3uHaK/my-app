@@ -6,7 +6,7 @@ function App() {
 	const [value, setValue] = useState('text');
 	
 	function handleChange(event) {
-		console.log(event.target.value); // текущий текст инпута
+		setValue(event.target.value); // текущий текст инпута
 	}
 	
 	return <div>
