@@ -4,13 +4,10 @@ import React, {useState} from 'react';
 
 function App() {
 		const [value1, setValue1] = useState('text');
-		const [value2, setValue2] = useState("age");
 		
 		return <div>
 			<input value={value1} onChange={event => setValue1(event.target.value)} /><br/>
-			<input value={value2} onChange={event => setValue2(event.target.value)}/>
-			<p>text: {value1}</p>
-			<p>age: {value2}</p>
+			<p>text: {value1.length}</p>
 		</div>;
 	// const [name, setName] = useState('ALex');
 	// const [age, setAge] = useState(23);
