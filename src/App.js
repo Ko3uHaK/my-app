@@ -3,11 +3,14 @@ import { nanoid } from 'nanoid';
 import React, {useState} from 'react';
 
 function App() {
-		const [value1, setValue1] = useState('text');
+		const [value, setValue] = useState('age');
 		
+		function showAge(){
+			return value;
+		}
 		return <div>
-			<input value={value1} onChange={event => setValue1(event.target.value)} /><br/>
-			<p>text: {value1.length}</p>
+			<input value={value} onChange={event => setValue(event.target.value)} /><br/>
+			<p>text{showAge(value)}</p>
 		</div>;
 	// const [name, setName] = useState('ALex');
 	// const [age, setAge] = useState(23);
