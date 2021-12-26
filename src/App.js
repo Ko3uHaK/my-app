@@ -3,27 +3,32 @@ import { nanoid } from 'nanoid';
 import React, {useState} from 'react';
 
 function App() {
-	const [name, setName] = useState('ALex');
-	const [age, setAge] = useState(23);
-	let [inBlock, setInBlock] = useState(false);
-
-	function clickHandler1(){
-		setName('Daniil')
-	}
-	function clickHandler2(){
-		setAge('27')
-	}
-
-
+	const [value, setValue] = useState('text');
+	
 	return <div>
-		<span>{name}-{age}</span><br/>
-		<button onClick={clickHandler1}>Name</button><br/>
-		<button onClick={clickHandler2}>Age</button><br/>
-		<span>{inBlock ? "заблокирован" : "разблокирован" }</span><br/>
-		<span>{!inBlock ? <button onClick={()=> setInBlock(true)}>Заблокировать</button> : <button onClick={()=> setInBlock(false)}>Разблокировать</button>}</span>
-		<button onClick={()=>setAge(age +1)}>+1</button>
-		<button onClick={()=>setAge(age -1)}>-1</button>
+		<input value={value} />
 	</div>;
+	// const [name, setName] = useState('ALex');
+	// const [age, setAge] = useState(23);
+	// let [inBlock, setInBlock] = useState(false);
+
+	// function clickHandler1(){
+	// 	setName('Daniil')
+	// }
+	// function clickHandler2(){
+	// 	setAge('27')
+	// }
+
+
+	// return <div>
+	// 	<span>{name}-{age}</span><br/>
+	// 	<button onClick={clickHandler1}>Name</button><br/>
+	// 	<button onClick={clickHandler2}>Age</button><br/>
+	// 	<span>{inBlock ? "заблокирован" : "разблокирован" }</span><br/>
+	// 	<span>{!inBlock ? <button onClick={()=> setInBlock(true)}>Заблокировать</button> : <button onClick={()=> setInBlock(false)}>Разблокировать</button>}</span>
+	// 	<button onClick={()=>setAge(age +1)}>+1</button>
+	// 	<button onClick={()=>setAge(age -1)}>-1</button>
+	// </div>;
 	// <button onClick={()=> setInBlock(true)}>Заблокировать</button>
 	// 	<button onClick={()=> setInBlock(false)}>Разблокировать</button>
 	// <span>{setInBlock && <button onClick={clickHandler3}>Заблокировать</button>}</span>
