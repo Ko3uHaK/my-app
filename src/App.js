@@ -5,8 +5,12 @@ import React, {useState} from 'react';
 function App() {
 	const [value, setValue] = useState('text');
 	
+	function handleChange(event) {
+		console.log(event.target.value); // текущий текст инпута
+	}
+	
 	return <div>
-		<input value={value} />
+		<input value={value} onChange={handleChange} />
 	</div>;
 	// const [name, setName] = useState('ALex');
 	// const [age, setAge] = useState(23);
