@@ -4,10 +4,16 @@ import React, {useState} from 'react';
 
 function App() {
 	const [checked, setChecked] = useState(true);
+	const [checked1, setChecked1] = useState(true);
+	const [checked2, setChecked2] = useState(true);
 	
 	return <div>
+		<p>html</p>
 		<input type="checkbox" checked={checked} onChange={() => setChecked(!checked)} />
-		<button>{checked ? <p>Hello!</p> : <p>Goodbye!</p>}</button>
+		<input type="checkbox" checked={checked1} onChange={() => setChecked1(!checked1)} />
+		<input type="checkbox" checked={checked2} onChange={() => setChecked2(!checked2)} />
+		<p></p>
+		<p></p>
 	</div>;
 	// const [value, setValue] = useState(0);
 	
