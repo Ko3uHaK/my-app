@@ -3,12 +3,18 @@ import { nanoid } from 'nanoid';
 import React, {useState} from 'react';
 
 function App() {
-	const [value, setValue] = useState(0);
+	const [checked, setChecked] = useState(true);
 	
 	return <div>
-		<textarea value={value} onChange={event => setValue(+event.target.value)} />
-		<p>{value+value}</p>
+		<input type="checkbox" checked={checked} onChange={() => setChecked(!checked)} />
+		<button>{checked ? <p>Hello!</p> : <p>Goodbye!</p>}</button>
 	</div>;
+	// const [value, setValue] = useState(0);
+	
+	// return <div>
+	// 	<textarea value={value} onChange={event => setValue(+event.target.value)} />
+	// 	<p>{value+value}</p>
+	// </div>;
 		// const [value1, setValue1] = useState(0);
 		// const [result, setResult] = useState(0);
 		
