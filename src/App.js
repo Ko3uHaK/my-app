@@ -3,18 +3,27 @@ import { nanoid } from 'nanoid';
 import React, {useState} from 'react';
 
 function App() {
-	const [checked, setChecked] = useState(true);
-	const [checked1, setChecked1] = useState(true);
-	const [checked2, setChecked2] = useState(true);
+
+ 	let [number, setNumber] = useState(0);	
+		return(
+		<div>
+		<p>{number}</p>
+			<button onClick={()=> setNumber(number +=1) }>Incriment</button>
+			<button onClick={()=> setNumber(number -=1)}>Dicriment</button>
+		</div>
+	)
+	// const [checked, setChecked] = useState(true);
+	// const [checked1, setChecked1] = useState(true);
+	// const [checked2, setChecked2] = useState(true);
 	
-	return <div>
-		<p>html</p>
-		<input type="checkbox" checked={checked} onChange={() => setChecked(!checked)} />
-		<input type="checkbox" checked={checked1} onChange={() => setChecked1(!checked1)} />
-		<input type="checkbox" checked={checked2} onChange={() => setChecked2(!checked2)} />
-		<p></p>
-		<p></p>
-	</div>;
+	// return <div>
+	// 	<p>html</p>
+	// 	<input type="checkbox" checked={checked} onChange={() => setChecked(!checked)} />
+	// 	<input type="checkbox" checked={checked1} onChange={() => setChecked1(!checked1)} />
+	// 	<input type="checkbox" checked={checked2} onChange={() => setChecked2(!checked2)} />
+	// 	<p></p>
+	// 	<p></p>
+	// </div>;
 	// const [value, setValue] = useState(0);
 	
 	// return <div>
