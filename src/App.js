@@ -8,8 +8,18 @@ function App() {
 	
 	const [value, setValue] = useState("How are you?");
 		return(
-		<div>
-		<ClassCounter/>
+		<div className='App'>
+			<div className='Post'>
+				<div className='post__content'>
+					<strong>1. JavaScript</strong>
+					<div>
+						JavaScript - languege for 
+					</div>
+				</div>
+				<div className='post__btn'>
+					<button>Dalete</button>
+				</div>
+			</div>
 		</div>
 	)
 	// const [checked, setChecked] = useState(true);
