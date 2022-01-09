@@ -5,9 +5,12 @@ import React, {useState} from 'react';
 function App() {
 
  	let [number, setNumber] = useState(0);	
+	const [value, setValue] = useState("How are you?");
 		return(
 		<div>
 		<p>{number}</p>
+		<p>{value}</p>
+		<input value={value} onChange={event => setValue(event.target.value)}></input>
 			<button onClick={()=> setNumber(number +=1) }>Incriment</button>
 			<button onClick={()=> setNumber(number -=1)}>Dicriment</button>
 		</div>
