@@ -3,23 +3,15 @@ import { nanoid } from 'nanoid';
 import React, {useState} from 'react';
 import Counter from './components/Counter';
 import ClassCounter from './components/ClassCounter';
+import './styles/main.css'
+import PostItem from './components/PostItem';
 
 function App() {
 	
 	const [value, setValue] = useState("How are you?");
 		return(
 		<div className='App'>
-			<div className='Post'>
-				<div className='post__content'>
-					<strong>1. JavaScript</strong>
-					<div>
-						JavaScript - languege for 
-					</div>
-				</div>
-				<div className='post__btn'>
-					<button>Dalete</button>
-				</div>
-			</div>
+		<PostItem post={{id: 1, title: 'JavaScript', body: "discription"}}/>
 		</div>
 	)
 	// const [checked, setChecked] = useState(true);
