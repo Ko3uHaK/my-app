@@ -2,13 +2,14 @@ import 'react-native-get-random-values'
 import { nanoid } from 'nanoid';
 import React, {useState} from 'react';
 import Counter from './components/Counter';
+import ClassCounter from './components/ClassCounter';
 
 function App() {
 	
 	const [value, setValue] = useState("How are you?");
 		return(
 		<div>
-		<Counter/>
+		<ClassCounter/>
 		</div>
 	)
 	// const [checked, setChecked] = useState(true);
