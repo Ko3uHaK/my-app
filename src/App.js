@@ -13,9 +13,15 @@ function App() {
 		{id: 2, title: 'JavaScript 2', body: "discription"},
 		{id: 3, title: 'JavaScript 3', body: "discription"}
 	]);
+	const [posts2, setPost2] = useState([
+		{id: 1, title: 'С++', body: "discription"},
+		{id: 2, title: 'С++ 2', body: "discription"},
+		{id: 3, title: 'С++ 3', body: "discription"}
+	]);
 		return(
 		<div className='App'>
-			<PostList posts={posts}/>
+			<PostList posts={posts} title='Список постов 1'/>
+			<PostList posts={posts2} title='Список постов 2'/>
 		</div>
 	)
 	// const [checked, setChecked] = useState(true);
