@@ -7,11 +7,17 @@ import './styles/main.css'
 import PostItem from './components/PostItem';
 
 function App() {
-	
-	const [value, setValue] = useState("How are you?");
+	const [post, setPost] = useState([
+		{id: 1, title: 'JavaScript', body: "discription"},
+		{id: 2, title: 'JavaScript 2', body: "discription"},
+		{id: 3, title: 'JavaScript 3', body: "discription"}
+	]);
 		return(
 		<div className='App'>
-		<PostItem post={{id: 1, title: 'JavaScript', body: "discription"}}/>
+		<h1>Список постов</h1>
+			{post.map(post=>
+				<PostItem post={post} key={post.id}/>
+			)}
 		</div>
 	)
 	// const [checked, setChecked] = useState(true);
