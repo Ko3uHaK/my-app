@@ -5,19 +5,17 @@ import Counter from './components/Counter';
 import ClassCounter from './components/ClassCounter';
 import './styles/main.css'
 import PostItem from './components/PostItem';
+import PostList from './components/PostList';
 
 function App() {
-	const [post, setPost] = useState([
+	const [posts, setPost] = useState([
 		{id: 1, title: 'JavaScript', body: "discription"},
 		{id: 2, title: 'JavaScript 2', body: "discription"},
 		{id: 3, title: 'JavaScript 3', body: "discription"}
 	]);
 		return(
 		<div className='App'>
-		<h1 style={{textAlign: 'center'}}>Список постов</h1>
-			{post.map(post=>
-				<PostItem post={post} key={post.id}/>
-			)}
+			<PostList posts={posts}/>
 		</div>
 	)
 	// const [checked, setChecked] = useState(true);
