@@ -7,19 +7,23 @@ import './styles/main.css'
 import PostItem from './components/PostItem';
 import PostList from './components/PostList';
 import MyButton from './components/UI/button/MyButton';
-
+import MyInput from './components/UI/input/MyInput';
 function App() {
 	const [posts, setPost] = useState([
 		{id: 1, title: 'JavaScript', body: "discription"},
 		{id: 2, title: 'JavaScript 2', body: "discription"},
 		{id: 3, title: 'JavaScript 3', body: "discription"}
 	]);
+	const [title, setTitle] = useState("sadas");
+	const addNewPost = () =>{
+
+	}
 		return(
 		<div className='App'>
 		<form>
-			<input type="text" placeholder='Название поста'/>
-			<input type="text" placeholder='Описание поста'/>
-			<MyButton> dfsdfs </MyButton>
+			<MyInput value={title} type="text" placeholder='Название поста'/>
+			<MyInput type="text" placeholder='Описание поста'/>
+			<MyButton onClick={addNewPost}> dfsdfs </MyButton>
 		</form>
 			<PostList posts={posts} title='Список постов 1'/>
 		</div>
